@@ -17,12 +17,9 @@
     </div>
     <!-- /#page-wrapper -->
 <script>
-    $(document).ready(function(){
-        $("#btn-show").click(function(){
-            var ano = "2017";
-            var servico = 'http://localhost:3000/backoffice/dashboard/set_ano?ano=';            
-                                                
-            Swal.fire({
+$(function(){
+    $("#btn-show").click(function(){
+        Swal.fire({
             title: 'Selecione o Ano Base',
             input: 'select',
             inputOptions: {
@@ -34,20 +31,25 @@
             cancelButtonText: 'Cancelar'
             }).then((result) => {
                 if (result.value) {
-                 $.getJSON(servico + result.value)
-                    .done(
+                    $.ajax({
+                        type: 'POST',
+                        url: '/backoffice/dashboard/set_ano',
+                        data: {
+                            ano: result.value
+                        }
+                    }).done(function(e){
                         Swal.fire({
                             type: 'success',
-                            title: 'Ano Base alterado para ' + result.value,
+                            title: e['msg'],
                             showConfirmButton: false,
                             timer: 1500
-                        })
-                    )
-                    .fail(console.log("Erro: " + error.statusText));
-                 }
-            }); 
+                        });
+                    });
+                }
+            });
         });
     });
+
 </script>
 
 

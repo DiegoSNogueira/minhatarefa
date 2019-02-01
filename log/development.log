@@ -10326,3 +10326,1315 @@ Processing by Backoffice::DashboardController#set_ano as JSON
 Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 21:07:31 -0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 25ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-01-31 21:07:33 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (31.6ms)
+Completed 200 OK in 1745ms (Views: 1733.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admins/sign_in?role=form" for 127.0.0.1 at 2019-01-31 21:07:38 -0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t2cks/4lxIa3T8h1ojNkBynSG427nJ4LWeSOOeZpgeVnRvuGRf6OhN8+ZzPV0YO3hkMP9a9VhlwPAdTsDyoSCg==", "admin"=>{"email"=>"admin@admin.com.br", "password"=>"[FILTERED]"}, "remember"=>"0", "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com.br"], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 421ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 21:07:39 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (3.4ms)
+Completed 200 OK in 314ms (Views: 288.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice/dashboard/set_ano?ano=2017" for 127.0.0.1 at 2019-01-31 21:07:45 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2017"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 21:13:54 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 232ms (Views: 217.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/declaracao_mensal/registros_id" for 127.0.0.1 at 2019-01-31 21:13:55 -0200
+  
+ActionController::RoutingError (No route matches [POST] "/declaracao_mensal/registros_id"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/backoffice/dashboard/set_ano?ano=&ano=2017" for 127.0.0.1 at 2019-01-31 21:13:58 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2017"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 21:14:02 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 305ms (Views: 290.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/declaracao_mensal/registros_id" for 127.0.0.1 at 2019-01-31 21:14:03 -0200
+  
+ActionController::RoutingError (No route matches [POST] "/declaracao_mensal/registros_id"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 21:15:13 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 252ms (Views: 237.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 21:15:15 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 222ms (Views: 208.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice/dashboard/set_ano?ano=2017" for 127.0.0.1 at 2019-01-31 21:15:30 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2017"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice/dashboard/set_ano?ano=2018" for 127.0.0.1 at 2019-01-31 21:15:37 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2018"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 21:16:51 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 272ms (Views: 257.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice/dashboard/set_ano?ano=2017" for 127.0.0.1 at 2019-01-31 21:16:57 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2017"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice/dashboard/set_ano?ano=2017" for 127.0.0.1 at 2019-01-31 21:17:18 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2017"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 21:17:43 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 226ms (Views: 212.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/backoffice/dashboard/set_ano?ano=2017" for 127.0.0.1 at 2019-01-31 21:17:46 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2017"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 21:18:09 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 227ms (Views: 214.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice/dashboard/set_ano?ano=2017" for 127.0.0.1 at 2019-01-31 21:18:12 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2017"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 21:25:10 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 213ms (Views: 198.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/declaracao_mensal/registros_id" for 127.0.0.1 at 2019-01-31 21:25:10 -0200
+  
+ActionController::RoutingError (No route matches [POST] "/declaracao_mensal/registros_id"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/backoffice/dashboard/set_ano?ano=2017" for 127.0.0.1 at 2019-01-31 21:25:14 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2017"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 21:29:39 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 223ms (Views: 205.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/backoffice/dashboard/set_ano?ano=2017" for 127.0.0.1 at 2019-01-31 21:29:43 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2017"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 21:31:07 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 220ms (Views: 206.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/backoffice/dashboard/set_ano?ano=2017" for 127.0.0.1 at 2019-01-31 21:31:10 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2017"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 21:33:07 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 223ms (Views: 209.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice/dashboard/set_ano?ano=2017" for 127.0.0.1 at 2019-01-31 21:33:11 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2017"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 21:34:07 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 217ms (Views: 203.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice/dashboard/set_ano?ano%5Bvalue%5D=2017" for 127.0.0.1 at 2019-01-31 21:34:11 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>{"value"=>"2017"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 21:34:32 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 227ms (Views: 213.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice/dashboard/set_ano[object%20Object]" for 127.0.0.1 at 2019-01-31 21:34:35 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/backoffice/dashboard/set_ano[object%20Object]"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 21:35:49 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (1.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 771ms (Views: 712.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/backoffice/dashboard/set_ano2017" for 127.0.0.1 at 2019-01-31 21:35:52 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/backoffice/dashboard/set_ano2017"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/backoffice/dashboard/set_ano2017" for 127.0.0.1 at 2019-01-31 21:42:51 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/backoffice/dashboard/set_ano2017"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-31 22:36:19 -0200
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/site/home/index.html.erb:9
+  Rendered site/home/index.html.erb within layouts/site (73.4ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.9ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 786ms (Views: 746.9ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2019-01-31 22:36:24 -0200
+Processing by Rails::InfoController#routes as HTML
+  Rendering C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/railties-5.2.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [40 times] (196.1ms)
+  Rendered C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (19.1ms)
+  Rendered C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/railties-5.2.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (284.7ms)
+Completed 200 OK in 461ms (Views: 396.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=set" for 127.0.0.1 at 2019-01-31 22:36:37 -0200
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"set"}
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=set" for 127.0.0.1 at 2019-01-31 22:36:39 -0200
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"set"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2019-01-31 22:37:17 -0200
+Processing by Rails::InfoController#routes as HTML
+  Rendering C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/railties-5.2.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [40 times] (9.8ms)
+  Rendered C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/railties-5.2.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (49.6ms)
+Completed 200 OK in 143ms (Views: 108.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=set" for 127.0.0.1 at 2019-01-31 22:37:22 -0200
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"set"}
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 22:39:02 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.5ms)
+Completed 200 OK in 415ms (Views: 381.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 22:39:45 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (14.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.3ms)
+Completed 200 OK in 465ms (Views: 409.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 22:43:53 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (1.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 378ms (Views: 318.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 22:44:23 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (1.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 392ms (Views: 331.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 22:44:25 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2018"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 22:44:41 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 247ms (Views: 231.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 22:44:43 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2018"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 22:44:51 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 258ms (Views: 241.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 22:45:11 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.4ms)
+Completed 200 OK in 277ms (Views: 259.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 22:45:13 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2018"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 22:47:53 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 375ms (Views: 333.5ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 22:47:56 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2018"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 22:48:54 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 448ms (Views: 387.1ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 22:48:57 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2018"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 22:49:34 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2018"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 13ms (Views: 0.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 22:54:05 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.7ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.4ms)
+Completed 200 OK in 358ms (Views: 297.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 22:54:08 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2018"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 22:54:16 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2018"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 22:54:36 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (1.2ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 461ms (Views: 393.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 22:54:39 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2017"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 22:54:45 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2018"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 22:56:04 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.5ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 309ms (Views: 237.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 22:56:07 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2017"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 22:56:13 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2018"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 22:56:19 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2017"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 22:56:23 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2018"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:16:40 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (1.0ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 509ms (Views: 416.5ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 23:16:49 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2018"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:17:07 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (1.3ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 287ms (Views: 261.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 23:17:14 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2017"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:17:46 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.9ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 339ms (Views: 277.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:17:52 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (1.1ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 354ms (Views: 313.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/devise" for 127.0.0.1 at 2019-01-31 23:20:45 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/devise"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/backoffice/categories" for 127.0.0.1 at 2019-01-31 23:20:53 -0200
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/backoffice/categories/index.html.erb:23
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (9.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 329ms (Views: 292.6ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2019-01-31 23:20:56 -0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yj1GgzoYMb9pDhHrXqm2JMb40TBmHLi0bAeSytOb4zeZ8suZ+Wd4HAZH+g+32FGcguQlzuoJNpXHOjf3y5qt9g=="}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 30ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-31 23:20:56 -0200
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/site/home/index.html.erb:9
+  Rendered site/home/index.html.erb within layouts/site (3.1ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.4ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 186ms (Views: 173.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:21:04 -0200
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-01-31 23:21:04 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (4.0ms)
+Completed 200 OK in 198ms (Views: 196.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2019-01-31 23:21:11 -0200
+Processing by Backoffice::CategoriesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in?role=form" for 127.0.0.1 at 2019-01-31 23:21:13 -0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A2U4kFkhLYaPW2j7UG8rv2bBQyg68nZWiQboKL5Lv6Q0L5fhQB1CncarpWjIL8iM57dtler/7vZAMLsFgjEQYA==", "admin"=>{"email"=>"admin@admin.com.br", "password"=>"[FILTERED]"}, "remember"=>"0", "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com.br"], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/backoffice/categories
+Completed 302 Found in 251ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice/categories" for 127.0.0.1 at 2019-01-31 23:21:14 -0200
+Processing by Backoffice::CategoriesController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/categories/index.html.erb within layouts/backoffice
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/backoffice/categories/index.html.erb:23
+  Rendered backoffice/categories/index.html.erb within layouts/backoffice (9.8ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 262ms (Views: 242.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-01-31 23:24:10 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (3.9ms)
+Completed 200 OK in 263ms (Views: 250.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/admins/sign_in?role=form" for 127.0.0.1 at 2019-01-31 23:24:14 -0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wxV2r+k7Q88yTPaC9m06WGn8SevMh9kqDqbwCAaZUDDCPOKRkB0VG9TE/MyD1w6279EYazJP0SQOTYLQoFrK7w==", "admin"=>{"email"=>"admin@admin.com.br", "password"=>"[FILTERED]"}, "remember"=>"0", "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com.br"], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 228ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-31 23:24:15 -0200
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/site/home/index.html.erb:9
+  Rendered site/home/index.html.erb within layouts/site (5.8ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.5ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 173ms (Views: 158.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:24:38 -0200
+  
+ActionController::RoutingError (undefined local variable or method `session' for BackofficeController:Class):
+  
+app/controllers/backoffice_controller.rb:5:in `<class:BackofficeController>'
+app/controllers/backoffice_controller.rb:1:in `<top (required)>'
+app/controllers/backoffice/dashboard_controller.rb:1:in `<top (required)>'
+Started GET "/info/routes" for 127.0.0.1 at 2019-01-31 23:26:48 -0200
+  
+ActionController::RoutingError (No route matches [GET] "/info/routes"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:29:16 -0200
+  
+ActionController::RoutingError (undefined local variable or method `session_ano' for BackofficeController:Class):
+  
+app/controllers/backoffice_controller.rb:4:in `<class:BackofficeController>'
+app/controllers/backoffice_controller.rb:1:in `<top (required)>'
+app/controllers/backoffice/dashboard_controller.rb:1:in `<top (required)>'
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:30:04 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.3ms)
+Completed 200 OK in 326ms (Views: 294.6ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2019-01-31 23:34:18 -0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pot8N8iDQnS2aslgLdcoceM+Z0mxR/7CU6voGup7eaQ0AbvKVUmShpmi0RHMvd+H2asuoMfC2l9AWHBBbr3N1g=="}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-31 23:34:18 -0200
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/site/home/index.html.erb:9
+  Rendered site/home/index.html.erb within layouts/site (6.8ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.4ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 230ms (Views: 159.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:34:31 -0200
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-01-31 23:34:31 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (3.2ms)
+Completed 200 OK in 225ms (Views: 223.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in?role=form" for 127.0.0.1 at 2019-01-31 23:34:33 -0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lOazrKZ6q+c6b1w+NA+7KMQf1vVF4mtRaYkXyhc9NyC7KuSVxVX4xDbe4gpSshCR938lmkxlwV42SeV+iGMZfg==", "admin"=>{"email"=>"admin@admin.com.br", "password"=>"[FILTERED]"}, "remember"=>"0", "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com.br"], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 225ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:34:33 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 240ms (Views: 224.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/admins/sign_in?role=form" for 127.0.0.1 at 2019-01-31 23:35:16 -0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lOazrKZ6q+c6b1w+NA+7KMQf1vVF4mtRaYkXyhc9NyC7KuSVxVX4xDbe4gpSshCR938lmkxlwV42SeV+iGMZfg==", "admin"=>{"email"=>"admin@admin.com.br", "password"=>"[FILTERED]"}, "remember"=>"0", "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 19ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-31 23:35:16 -0200
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/site/home/index.html.erb:9
+  Rendered site/home/index.html.erb within layouts/site (7.8ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.3ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 160ms (Views: 143.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:35:33 -0200
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-01-31 23:35:33 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (2.3ms)
+Completed 200 OK in 242ms (Views: 238.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in?role=form" for 127.0.0.1 at 2019-01-31 23:35:36 -0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TaGGdaOVUpHcpOBtoY4D5rOk9P1wMBQJOfdvF1eTDzyhWfvWM4p4QCxqa8EKqcun7YlfhG5g/75bghsAeCk5NQ==", "admin"=>{"email"=>"admin@admin.com.br", "password"=>"[FILTERED]"}, "remember"=>"0", "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com.br"], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 257ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:35:36 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 196ms (Views: 182.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:36:03 -0200
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-01-31 23:36:03 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (2.0ms)
+Completed 200 OK in 202ms (Views: 193.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/admins/sign_in?role=form" for 127.0.0.1 at 2019-01-31 23:36:06 -0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jECwQSKZia8bMDWA5aPM2K9CKAHvUxJ+C9CyHoMcxaDkiAKIlyQTLYZvGnlbkQbcOMUZy152jyYs35EWzTtPDg==", "admin"=>{"email"=>"admin@admin.com.br", "password"=>"[FILTERED]"}, "remember"=>"0", "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com.br"], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 229ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:36:06 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:36:12 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:36:13 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:36:13 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:36:13 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:36:36 -0200
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-01-31 23:36:36 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (2.7ms)
+Completed 200 OK in 222ms (Views: 220.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in?role=form" for 127.0.0.1 at 2019-01-31 23:36:38 -0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FxLR/8gWXFgRq7aKbWGModpIi2y8qiFMPDv7zM3Jq8AheENyODCXSPWh5aPNUhmW7Wker3gdlCBp14T3CYTJJg==", "admin"=>{"email"=>"admin@admin.com.br", "password"=>"[FILTERED]"}, "remember"=>"0", "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com.br"], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 215ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:36:38 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:37:22 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 238ms (Views: 212.5ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2019-01-31 23:37:30 -0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"clSp6AZoblb6kyf9OW4UnSZE8gKRlMvimN8MKJD2i/9WO7JAEKmNXV/mJsMzSr9p7FKHqHCHknSxNDt/gzoC1w=="}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-31 23:37:30 -0200
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/site/home/index.html.erb:9
+  Rendered site/home/index.html.erb within layouts/site (14.0ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.4ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 198ms (Views: 182.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:37:41 -0200
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-01-31 23:37:41 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (2.8ms)
+Completed 200 OK in 260ms (Views: 258.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in?role=form" for 127.0.0.1 at 2019-01-31 23:37:43 -0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M0KD6buZHOM5Ly3Y0EAnE7WvCTsqXRk38+p/QYc1rMXZWdfmpB1HmtzvcxjUsONMJn0M0P857FO9tDy+tF0fpg==", "admin"=>{"email"=>"admin@admin.com.br", "password"=>"[FILTERED]"}, "remember"=>"0", "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com.br"], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 224ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:37:43 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.6ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 214ms (Views: 198.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2019-01-31 23:39:17 -0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MMMOT6WHxDZMNyuJkcdYQfIg1BU2iFrczLPA8QchrBi5tAAChJ04Yq1VW7LKbF09hopm/pB/AYyZsSkUKwILIw=="}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-31 23:39:18 -0200
+Processing by Site::HomeController#index as HTML
+  Rendering site/home/index.html.erb within layouts/site
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/site/home/index.html.erb:9
+  Rendered site/home/index.html.erb within layouts/site (6.2ms)
+  Rendered layouts/site_shared/_navigation.html.erb (0.3ms)
+  Rendered layouts/site_shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 155ms (Views: 140.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:39:22 -0200
+Processing by Backoffice::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-01-31 23:39:22 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/backoffice_devise
+  Rendered admins/sessions/new.html.erb within layouts/backoffice_devise (1.9ms)
+Completed 200 OK in 194ms (Views: 192.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in?role=form" for 127.0.0.1 at 2019-01-31 23:39:25 -0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qs4EBNXHRjjJpmIfxiPe/KUkUrGB7LZvORQVvX18V3RSVXqRa2Ps4a9hAiaKDcOpl89bWq7Hzo5G1I16mQrQwA==", "admin"=>{"email"=>"admin@admin.com.br", "password"=>"[FILTERED]"}, "remember"=>"0", "commit"=>"Log in", "role"=>"form"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com.br"], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/backoffice
+Completed 302 Found in 215ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/backoffice" for 127.0.0.1 at 2019-01-31 23:39:26 -0200
+Processing by Backoffice::DashboardController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering backoffice/dashboard/index.html.erb within layouts/backoffice
+  Rendered backoffice/dashboard/index.html.erb within layouts/backoffice (0.4ms)
+  Rendered layouts/backoffice_shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 212ms (Views: 196.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 23:39:33 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2017"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/backoffice/dashboard/set_ano" for 127.0.0.1 at 2019-01-31 23:39:46 -0200
+Processing by Backoffice::DashboardController#set_ano as JSON
+  Parameters: {"ano"=>"2018"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+

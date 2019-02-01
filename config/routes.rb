@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :categories, except: [:show, :destroy]
     get 'dashboard', to: 'dashboard#index'
     get 'admins/index'
-    get 'dashboard/set_ano' , :defaults => { :format => 'json' }
+    post 'dashboard/set_ano' , :defaults => { :format => 'json' }
   end
   namespace :site do
     get 'home', to: 'home#index'
