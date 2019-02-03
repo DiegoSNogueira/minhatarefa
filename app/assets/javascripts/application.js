@@ -15,3 +15,5 @@
 //= require activestorage
 //= require turbolinks
 
+// This file has to be required before rails-ujs
+// To use it change `data-confirm` of your links to `data-confirm-swal`
